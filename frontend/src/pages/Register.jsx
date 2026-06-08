@@ -57,7 +57,7 @@ function Register() {
 
       const response = await fetch(
 
-        "http://localhost:5000/auth/register",
+        "https://preptracker-d9k6.onrender.com/auth/register",
 
         {
 

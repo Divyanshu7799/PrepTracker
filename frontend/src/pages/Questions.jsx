@@ -74,7 +74,7 @@ const handleAddQuestion = async () => {
 
     const response = await fetch(
 
-      "http://localhost:5000/questions/add",
+      "https://preptracker-d9k6.onrender.com/questions/add",
 
       {
 

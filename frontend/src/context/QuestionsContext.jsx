@@ -13,7 +13,7 @@ useEffect(() => {
 
 fetch(
 
-  "http://localhost:5000/questions",
+  "https://preptracker-d9k6.onrender.com/questions",
 
   {
 
@@ -58,7 +58,7 @@ const markSolved = async (questionId) => {
 
     const response = await fetch(
 
-      `http://localhost:5000/questions/${questionId}`,
+      `https://preptracker-d9k6.onrender.com/questions/${questionId}`,
 
       {
 
@@ -130,7 +130,7 @@ const deleteQuestion = async (
 
     const response = await fetch(
 
-      `http://localhost:5000/questions/${questionId}`,
+      `https://preptracker-d9k6.onrender.com/questions/${questionId}`,
 
       {
 

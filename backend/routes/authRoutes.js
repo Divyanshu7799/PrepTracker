@@ -123,7 +123,7 @@ router.post("/login", (req, res) => {
 
                 },
 
-                "mySecretKey",
+                process.env.JWT_SECRET,
 
                 {
 

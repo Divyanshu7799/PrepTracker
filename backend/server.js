@@ -1,20 +1,26 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const authRoutes = require("./routes/authRoutes");
-require("./config/db");
+
 const app = express();
-const questionsRoutes = require("./routes/questionsRoutes");
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Backend Running Divyanshu  🚀");
-});
-app.use("/questions", questionsRoutes);
-app.use("/auth", authRoutes);
-const PORT = process.env.PORT || 5000;
+require("./config/db");
 
+const authRoutes = require("./routes/authRoutes");
+const questionsRoutes = require("./routes/questionsRoutes");
+const resourcesRoutes = require("./routes/resourcesRoutes");
+
+app.get("/", (req, res) => {
+  res.send("Backend Running 🚀");
+});
+
+app.use("/auth", authRoutes);
+app.use("/questions", questionsRoutes);
+app.use("/resources", resourcesRoutes);
+
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

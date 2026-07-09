@@ -1,7 +1,13 @@
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import {
+  FaHome,
+  FaChartLine,
+  FaCode,
+  FaBookOpen,
+  FaFire,
+} from "react-icons/fa";
 function Sidebar() {
 
   const navigate = useNavigate();
@@ -77,8 +83,8 @@ function Sidebar() {
               font-medium
             "
           >
-
-            🏠 Home
+            <FaHome className="inline mr-3" />
+            Home
 
           </Link>
 
@@ -97,8 +103,8 @@ function Sidebar() {
               font-medium
             "
           >
-
-            📊 Dashboard
+            <FaChartLine className="inline mr-3" />
+            Dashboard
 
           </Link>
 
@@ -117,11 +123,21 @@ function Sidebar() {
               font-medium
             "
           >
-
-            📚 Questions
+            <FaCode className="inline mr-3" />
+            Questions
 
           </Link>
-
+          <Link
+            to="/resources"
+            className="
+    px-4 py-3 rounded-xl text-gray-300
+    hover:bg-[#1e293b] hover:text-white
+    transition duration-300 font-medium
+  "
+          >
+            <FaBookOpen className="inline mr-3" />
+            Resources
+          </Link>
         </nav>
 
       </div>

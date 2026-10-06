@@ -235,14 +235,14 @@ const deleteQuestion = async (
 
   return (
 
-    <QuestionsContext.Provider
-      value={{
-        questions,
-        markSolved,
-        deleteQuestion
-
-      }}
-    >
+  <QuestionsContext.Provider
+  value={{
+    questions,
+    addQuestion,
+    markSolved,
+    deleteQuestion
+  }}
+>
 
       {children}
 
